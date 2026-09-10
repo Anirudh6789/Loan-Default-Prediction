@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+mlruns/
+mlflow.db
+data/loan_data.csv
+.git/
+.gitignore
+README.md
