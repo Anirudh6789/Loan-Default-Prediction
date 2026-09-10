@@ -62,11 +62,6 @@ Response:
 {"default_probability": 0.8458, "default_prediction": 1, "model_name": "loan-default-classifier", "model_stage": "Production"}
 ```
 
-## What I'd Do With More Time
-- Add a drift-detection job (e.g. Evidently) that compares live prediction inputs to training data and triggers retraining automatically
-- Add a CI/CD gate (GitHub Actions) so a new model only gets promoted if it beats the *current* Production model, not just a fixed threshold
-- Swap the SQLite-backed tracking store for a proper MLflow tracking server + Postgres backend for multi-user use
-- Containerize the serving app and deploy it, with the MLflow tracking URI pointed at a remote server
 
 ## Tech Stack
 Python, scikit-learn, MLflow (tracking + Model Registry), FastAPI, pandas
